@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include <opencv2/opencv.hpp>
+using namespace cv;
 
 class CMfcOpenCVDlg : public CDialogEx
 {
@@ -18,4 +20,10 @@ protected:
 	DECLARE_MESSAGE_MAP()
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
+
+protected:
+	void Render(CDC* pDC, const CRect& rc, Mat* src);
+
+protected:
+	Mat mat;
 };

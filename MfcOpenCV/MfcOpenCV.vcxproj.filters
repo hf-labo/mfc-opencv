@@ -54,6 +54,7 @@
     <None Include="res\MfcOpenCV.rc2">
       <Filter>リソース ファイル</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\MfcOpenCV.ico">
