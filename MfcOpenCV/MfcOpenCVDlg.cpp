@@ -31,7 +31,13 @@ BOOL CMfcOpenCVDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);
 	SetIcon(m_hIcon, FALSE);
 
-	mat = ::imread("C:\\Users\\furuta\\Pictures\\cat.jpg");
+	mat = ::imread("cat.jpg");
+
+    ::cvtColor(mat, mat, COLOR_BGR2GRAY);
+    ::imwrite("grayscale.jpg", mat);
+
+    ::threshold(mat, mat, 0, 255, THRESH_OTSU);
+    ::imwrite("threshold.jpg", mat);
 
 	return TRUE;
 }
